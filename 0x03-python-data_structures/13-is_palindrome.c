@@ -8,11 +8,9 @@
 int is_palindrome(listint_t **head)
 {
 	listint_t *first = *head;
-	int size = 0, i , j;
-	int data[125];
 
-	if (!(*head))
-		return (1);
+	int size = 0, i, j, mid;
+	int data[1003];
 
 	while (first)
 	{
@@ -21,11 +19,12 @@ int is_palindrome(listint_t **head)
 		first = first->next;
 	}
 
-	for (i = 0, j = size - 1; i < size / 2; i++, j--)
+	mid = size / 2;
+	for (i = 0, j = size - 1; i < mid; i++, j--)
 	{
 		if (data[i] != data[j])
 			return (0);
 	}
-	
+
 	return (1);
 }
