@@ -8,8 +8,9 @@
 int is_palindrome(listint_t **head)
 {
 	listint_t *first = *head;
+
 	int size = 0, i, j, mid;
-	int data[10];
+	int data[2350];
 
 	while (first)
 	{
