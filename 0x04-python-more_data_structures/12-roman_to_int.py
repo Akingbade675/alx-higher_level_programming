@@ -12,4 +12,6 @@ def roman_to_int(roman_string):
         cur = romans[i]
         num += (cur - prev - prev) if cur > prev else cur
 
+        prev = cur
+
     return num
