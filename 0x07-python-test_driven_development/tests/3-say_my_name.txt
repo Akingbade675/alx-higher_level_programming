@@ -1,0 +1,59 @@
+===========================
+How to use 3-say_my_name.py
+===========================
+
+3-say_my_name.py file defines a function ``say_my_name()``
+
+Usage
+=====
+
+The function takes in two arguments.
+``say_my_name(first_name, last_name="")`` prints
+My name is <first name> <last name>
+
+::
+
+	say_my_name = __import__('3-say_my_name').say_my_name
+	>>> say_my_name("Abdulbasit", "Akingbade")
+	My name is Abdulbasit Akingbade
+
+
+The parameter ```last_name``` is optional. If no last name is provided,
+an empty string is printed instead.
+
+::
+
+	>>> say_my_name("Bhobo")
+	My name is Bhobo
+
+Invalid Arguments
+=================
+
+The arguments passed to the function my be Strings.
+Otherwise, an exception is raised.
+
+::
+
+	>>> say_my_name(12, "White")
+	Traceback (most recent last call)
+	TypeError: first_name must be a string
+
+::
+
+        >>> say_my_name("Smith", [1, 2, 3])
+        Traceback (most recent last call)
+        TypeError: last_name must be a string
+
+None cannot be passed as argument
+::
+
+        >>> say_my_name(None)
+        Traceback (most recent last call)
+        TypeError: first_name must be a string
+
+Argument cannot be empty
+::
+
+	>>> say_my_name()
+	Traceback (most recent last call)
+	TypeError: first_name must be a string
