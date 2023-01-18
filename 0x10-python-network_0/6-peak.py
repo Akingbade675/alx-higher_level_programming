@@ -21,3 +21,7 @@ def find_peak(list_of_integers):
         return find_peak(list_of_integers[:mid])
     else:
         return find_peak(list_of_integers[mid + 1:])
+
+
+
+print(find_peak([3, 1, 2, 1, 2, 3, 4, 1]))
