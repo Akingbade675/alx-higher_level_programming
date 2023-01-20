@@ -1,6 +1,6 @@
 #!/usr/bin/python3
-"""A script that 
-- takes my GitHub credentials (username and password) 
+"""A script that
+- takes my GitHub credentials (username and password)
 - and uses the GitHub API to display your id.
 """
 
