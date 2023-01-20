@@ -6,7 +6,7 @@ using urllib module.
 if __name__ == "__main__":
     import urllib.request as req
 
-    with req.urlopen("https://alx-intranet.hbtn.io/status") as res:
+    with req.urlopen("https://intranet.hbtn.io/status") as res:
         content = res.read()
         print("Body Response:\n\t- type: {}".format(type(content)))
         print("\t- content: {}".format(content))
