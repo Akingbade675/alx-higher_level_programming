@@ -10,6 +10,6 @@ if __name__ == "__main__":
 
     res = requests.get(sys.argv[1])
     if res.status_code >= 400:
-        print("Eror code: {}".format(res.status_code))
+        print("Error code: {}".format(res.status_code))
     else:
-        print(r.text)
+        print(res.text)

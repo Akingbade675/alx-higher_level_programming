@@ -12,6 +12,6 @@ from urllib.error import HTTPError
 if __name__ == "__main__":
     try:
         with urlopen(sys.argv[1]) as res:
-            print(res.read().encode('utf-8'))
+            print(res.read().decode('utf-8'))
     except HTTPError as e:
         print("Error code: {}".format(e.code))
