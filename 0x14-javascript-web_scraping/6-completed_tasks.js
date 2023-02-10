@@ -16,7 +16,7 @@ request(url, (err, res, body) => {
           if (n.userId === task.userId && n.completed) { return true; }
           return false;
         });
-        tasks[task.userId] = compls.length;
+        if (compls.length) tasks[task.userId] = compls.length;
       }
     }
 

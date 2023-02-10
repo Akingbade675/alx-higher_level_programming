@@ -1,3 +1,5 @@
+#!/usr/bin/node
+
 const request = require('request');
 const async = require('async');
 
@@ -16,7 +18,6 @@ request(apiUrl, (error, response, body) => {
   }
 
   const movie = JSON.parse(body);
-  console.log(`Characters in the movie "${movie.title}":`);
   async.eachSeries(movie.characters, (characterUrl, callback) => {
     request(characterUrl, (error, response, body) => {
       if (error) {
