@@ -1,4 +1,4 @@
-$('document').ready(function () {
+$(document).ready(function () {
   $('INPUT#btn_translate').click(function () {
     translate();
   });
